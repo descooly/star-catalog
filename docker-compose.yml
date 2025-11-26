@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - '3000:1323'
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=wbnsuemdbuser
+      - DB_PASSWORD=wbpass
+      - DB_NAME=wbdb
+      - DB_PORT=5432
+      - DB_SSLMODE=disable
+    depends_on:
+      - postgres
+    restart: on-failure
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: wbdb
+      POSTGRES_USER: wbnsuemdbuser
+      POSTGRES_PASSWORD: wbpass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

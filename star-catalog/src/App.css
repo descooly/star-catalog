@@ -1,0 +1,133 @@
+/* Общие стили — те же, что и раньше */
+body {
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+	color: white;
+}
+
+header {
+	text-align: center;
+	padding: 2rem 1rem;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+	font-size: 2.2rem;
+	margin-bottom: 0.5rem;
+	color: #a0d2eb;
+}
+
+main {
+	max-width: 900px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+}
+
+.search-box,
+.add-star-box {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border-radius: 12px;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.4rem;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 0.6rem;
+	border-radius: 6px;
+	border: 1px solid #5a5a8c;
+	background: rgba(0, 0, 0, 0.3);
+	color: white;
+}
+
+.form-row {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.form-row .form-group {
+	flex: 1;
+	min-width: 180px;
+}
+
+button {
+	width: 100%;
+	padding: 0.8rem;
+	background: #4a6cf7;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #3a5bf5;
+}
+
+.results {
+	background: rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	padding: 1.5rem;
+	min-height: 100px;
+}
+
+.results h2 {
+	margin-bottom: 1rem;
+}
+
+.success-message {
+	padding: 1rem;
+	background: rgba(40, 167, 69, 0.2);
+	border: 1px solid #28a745;
+	border-radius: 8px;
+	color: #bff8d0;
+	text-align: center;
+	font-weight: 500;
+	margin: 1rem 0;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1rem;
+}
+
+th,
+td {
+	padding: 0.8rem;
+	text-align: left;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+	color: #a0d2eb;
+}
+
+footer {
+	text-align: center;
+	padding: 1.5rem;
+	color: #aaa;
+	font-size: 0.9rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+	.form-row {
+		flex-direction: column;
+	}
+}
