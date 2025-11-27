@@ -3,9 +3,10 @@ package main
 import (
 	"log"
 	"os"
-	"wb/internal/db"
-	"wb/internal/handler"
-	"wb/internal/service"
+
+	"github.com/descooly/star-catalog/internal/db"
+	"github.com/descooly/star-catalog/internal/handler"
+	"github.com/descooly/star-catalog/internal/service"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

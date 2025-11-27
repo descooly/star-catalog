@@ -1,4 +1,4 @@
-module wb
+module github.com/descooly/star-catalog
 
 go 1.25.4
 

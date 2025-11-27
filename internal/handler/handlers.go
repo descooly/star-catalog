@@ -2,7 +2,8 @@ package handler
 
 import (
 	"net/http"
-	"wb/internal/service"
+
+	"github.com/descooly/star-catalog/internal/service"
 
 	"github.com/labstack/echo/v4"
 )

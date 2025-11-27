@@ -5,7 +5,8 @@ import (
 	"log"
 	"os"
 	"time"
-	"wb/internal/service"
+
+	"github.com/descooly/star-catalog/internal/service"
 
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
