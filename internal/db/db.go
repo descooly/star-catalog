@@ -17,7 +17,7 @@ var DB *gorm.DB
 
 func InitDB() (*gorm.DB, error) {
 	if err := godotenv.Load(); err != nil {
-		log.Printf("No .env file found, using environment variables, error: %v", err)
+		log.Printf("no .env file found, using environment variables, error: %v", err)
 	}
 
 	host := os.Getenv("DB_HOST")
@@ -28,7 +28,7 @@ func InitDB() (*gorm.DB, error) {
 	sslmode := os.Getenv("DB_SSLMODE")
 
 	if host == "" || user == "" || password == "" || dbname == "" || port == "" {
-		log.Fatal("Missing required database environment variables")
+		log.Fatal("missing required database environment variables")
 	}
 
 	constr := fmt.Sprintf(
@@ -41,10 +41,10 @@ func InitDB() (*gorm.DB, error) {
 	for i := 0; i < 30; i++ {
 		DB, err = gorm.Open(postgres.Open(constr), &gorm.Config{})
 		if err == nil {
-			log.Println("✅ Successfully connected to database")
+			log.Println("successfully connected to database")
 			break
 		}
-		log.Printf("⏳ Waiting for database... %v", err)
+		log.Printf("waiting for database %v", err)
 		time.Sleep(1 * time.Second)
 	}
 
